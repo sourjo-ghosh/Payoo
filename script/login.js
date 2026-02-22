@@ -5,7 +5,7 @@ document.getElementById('login-btn').addEventListener('click', function(){
     const pinInput = document.getElementById('pin-input');
     const Pin = pinInput.value;
     console.log(Pin)
-    if(mobileNumber == '01402723682' && Pin == '1234' ){
+    if(mobileNumber == '01407273682' && Pin == '1234' ){
         alert('Login Successful')
         mobileInput.value = '';
         pinInput.value = '';
