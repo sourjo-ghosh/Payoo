@@ -9,7 +9,7 @@ document.getElementById('login-btn').addEventListener('click', function(){
         alert('Login Successful')
         mobileInput.value = '';
         pinInput.value = '';
-        window.location.assign("/Home.html");
+        window.location.assign("Home.html");
     } else{
         alert('Wrong Credential, Try Again')
         return;
