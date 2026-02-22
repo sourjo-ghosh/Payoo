@@ -25,14 +25,14 @@
 </head>
 
 <body class="min-h-screen max-w-md bg-base-300 mx-auto">
-    <header class="border-b-2 border-gray-300">
+    <header class="border-b-2 border-gray-300 sticky top-2 bg-base-300 z-10">
         <section class="w-11/12 mx-auto py-3 flex justify-between ">
             <div class="left flex  gap-1">
                 <div class="logo w-[65px]">
                     <img src="/assets/logo.png" alt="">
                 </div>
-                <div class="balance">
-                    <h2>$ <span>45000</span></h2>
+                <div class="balance-part">
+                    <h2>$ <span id="balance">45000</span></h2>
                     <p class="text-neutral/50">Available Balance</p>
                 </div>
             </div>
@@ -83,23 +83,27 @@
             <div class="card bg-base-100 w-full shadow rounded-2xl">
                 <div class="card-body ">
                     <fieldset class="fieldset">
+                        <!-- agent number -->
                         <label class="label text-neutral text-bold text-[16px]">Agent Number</label>
                         <input type="tel" id="cashout-number" maxlength="11" minlength="11"
                             class="input rounded-full bg-base-300 text-[16px] w-full" placeholder="Enter 11 digit number" />
+                        <!-- amount number  -->
                         <label class="label text-neutral text-bold text-[16px] mt-5">Amount</label>
                         <input type="number" maxlength="4" id="cashout-amout" minlength="4"
                             class="input rounded-full bg-base-300 text-[16px] w-full" placeholder="Enter amount to withdraw" />
+                            <!-- pin number -->
                         <label class="label text-neutral text-bold text-[16px] mt-5">Pin Number</label>
                         <input type="password" maxlength="4" id="cashout-pin" minlength="4"
                             class="input rounded-full bg-base-300 text-[16px] w-full" placeholder="Enter 4 digit pin number" />
-                        <button id="cahsout-btn"
+                            <!-- button -->
+                        <button id="cashout-btn"
                             class="btn btn-neutral mt-4 bg-primary rounded-full text-bold text-[16px]">Withdraw Money</button>
                     </fieldset>
                 </div>
             </div>
         </div>
     </section>
-
+<script src="script/cashout.js"></script>
 </body>
 
 </html>
