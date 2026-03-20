@@ -119,7 +119,7 @@
     </section>
 
     <!-- Transaction section -->
-    <section id="transaction" class="w-11/12 mx-auto py-4 mt-3 service-section">
+    <section id="transaction" class="w-11/12 mx-auto py-4 mt-3 service-section hidden">
         <div class="flex justify-between items-center">
             <p class="text-[#080808] text-[18px] font-semibold">Latest Payment</p>
             <p class="text-[14px] text-[#080808]/50">View all</p>
@@ -194,23 +194,22 @@
                         </div>
                         <!-- agent number -->
                         <label class="label text-neutral text-bold text-[16px]">Bank Account Number</label>
-                        <input type="tel" id="cash-out-number" maxlength="11" minlength="11"
+                        <input type="tel" id="add-money-number" maxlength="11" minlength="11"
                             class="input rounded-full bg-base-300 text-[16px] w-[350px] focus:outline-none"
                             placeholder="Enter 11 digit account number" />
                         <!-- amount number  -->
                         <label class="label text-neutral text-bold text-[16px] mt-5">Amount to Add</label>
-                        <input type="number" maxlength="4" id="cash-out-amout" minlength="4"
+                        <input type="number" maxlength="4" id="add-money-amount" minlength="4"
                             class="input rounded-full bg-base-300 text-[16px] w-[350px] focus:outline-none"
                             placeholder="Add Amount to withdraw" />
                         <!-- pin number -->
                         <label class="label text-neutral text-bold text-[16px] mt-5">Pin Number</label>
-                        <input type="password" maxlength="4" id="cash-out-pin" minlength="4"
+                        <input type="password" maxlength="4" id="add-money-pin" minlength="4"
                             class="input rounded-full bg-base-300 text-[16px] w-[350px] focus:outline-none"
                             placeholder="Enter 4 digit pin number" />
                         <!-- button -->
-                        <button id="cash-out-btn"
-                            class="btn btn-neutral mt-4 bg-primary rounded-full text-bold text-[16px]">Withdraw
-                            Money</button>
+                        <button id="add-money-btn"
+                            class="btn btn-neutral mt-4 bg-primary rounded-full text-bold text-[16px]">Add Money</button>
                     </fieldset>
                 </div>
             </div>

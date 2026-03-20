@@ -9,12 +9,12 @@ document.getElementById('cash-out-btn')
             return;
         } 
         // get the amount value 
-        const cashOutInput = document.getElementById('cashOut-amout')
+        const cashOutInput = document.getElementById('cash-out-amout')
         const cashOutAmount = cashOutInput.value;
         // get the balance info
         const balanceInfo = document.getElementById('balance');
         const currentBalance = balanceInfo.innerText;
-        console.log(currentBalance);
+        // console.log(currentBalance);
         // Update the new balance 
         const newBalance = Number(currentBalance) - Number(cashOutAmount);
         if (cashOutAmount <= 0 || newBalance < 0) {
@@ -24,13 +24,13 @@ document.getElementById('cash-out-btn')
             amount.style.color = "red"
             return;
         }
-        const cashOutPinInput = document.getElementById("cashOut-pin");
-        const cashOutPin = cashOutPinInput.value;
-        if (cashOutPin === "1234") {
+        const cashOutPinInput = document.getElementById("cash-out-pin");
+        const cashOutCashPin = cashOutPinInput.value;
+        if (cashOutCashPin === "1234") {
             alert(`Cash Out Successful! Available Balance: ${newBalance}`)
         } else {
-            alert('Wrong Pin Number')
-            const amount = document.getElementById('cashOut-pin')
+            alert('Wrong Cash-out-pin Number')
+            const amount = document.getElementById('cash-out-pin')
             amount.style.borderColor = "red";
             amount.value = '';
             return;
@@ -39,12 +39,12 @@ document.getElementById('cash-out-btn')
         agentNumberInput.value = "";
         cashOutInput.value = "";
         cashOutPinInput.value = "";
-        document.getElementById('cashout').classList.add('hidden')
+        document.getElementById('cash-out').classList.add('hidden')
     })
 
-const pinInput = document.getElementById('cash-out-pin');
-pinInput.addEventListener('input', function () {
-    pinInput.style.borderColor = "";
+const cashOutPinInput = document.getElementById('cash-out-pin');
+cashOutPinInput.addEventListener('input', function () {
+    cashOutPinInput.style.borderColor = "";
 });
 
 const cashOutInput = document.getElementById('cash-out-number')
@@ -75,25 +75,5 @@ const tabToggling = () => {
     })
 }
 
-
+document.getElementById('transaction').classList.remove('hidden')
 tabToggling()
-
-// const allSections = document.querySelectorAll('.service-section')
-
-// const showSection = (sectionId) => {
-//     allSections.forEach(section => section.classList.add('hidden'))
-//     document.getElementById(sectionId).classList.remove('hidden')
-// }
-
-// const tabToggling = () => {
-//     const allBtns = document.querySelectorAll('.service-btn')
-    
-//     showSection('transaction') // default
-
-//     allBtns.forEach(btn => {
-//         btn.addEventListener('click', (e) => {
-//             showSection(e.currentTarget.dataset.target)
-//         })
-//     })
-// }
-
