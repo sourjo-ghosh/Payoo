@@ -35,14 +35,22 @@
         <fieldset class="fieldset">
           <label class="label text-neutral text-bold text-[16px]" value>Mobile Number</label>
           <input type="tel" id="mobile-input" maxlength="11" minlength="11" class="input rounded-full bg-base-300 text-[16px]" placeholder="Enter your number" />
-          <label class="label text-neutral text-bold text-[16px] mt-5">4 Digit Cash-out-pin</label>
-          <input type="password" maxlength="4" id="cash-out-pin-input" minlength="4" class="input rounded-full bg-base-300 text-[16px]" placeholder="Enter 4 Digit Cash-out-pin" />
+          <label class="label text-neutral text-bold text-[16px] mt-5">4 Digit pin</label>
+          <input type="password" maxlength="4" id="pin-input" minlength="4" class="input rounded-full bg-base-300 text-[16px]" placeholder="Enter 4 Digit pin" />
           <button id="login-btn" class="btn btn-neutral mt-4 bg-primary rounded-full text-bold text-[16px]">Login</button>
         </fieldset>
       </div>
     </div>
 </div>
 
+<div class="w-10/12 mx-auto m-5 border border-gray-500 p-5 rounded-2xl space-y-2"> 
+    <p class="font-light text-[15px]">Use this Demo Credential to login!</p>
+    <p class="text-gray-700">Demo Credential</p>
+    <p>Mobile Number :  <span class="text-[20px]">01407273682</span></p>
+    <p>Pin Number :  <span class="text-[20px]">1234</span></p>
+    <p class="font-light text-[15px]">This Pin will require for all transactions</p>
+
+</div>
 <!-- You can open the modal using ID.showModal() method -->
 <!-- <button class="btn" onclick="my_modal_3.showModal()">open modal</button> -->
 <dialog id="my_modal_3" class="modal">
